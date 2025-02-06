@@ -1,0 +1,59 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and font */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f8ff;
+    overflow: hidden;
+}
+
+/* Welcome page */
+.welcome-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #42a5f5, #66bb6a);
+    color: white;
+    text-align: center;
+}
+
+.hero-section {
+    animation: fadeIn 1.5s ease-out;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    padding: 10px 25px;
+    background-color: #0d47a1;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #1e88e5;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
