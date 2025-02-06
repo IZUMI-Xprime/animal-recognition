@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Animal Monitoring</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+    <!--<img src="{{ url_for('heatmap') }}" alt="Heatmap" style="max-width: 100%; height: auto;" /> -->
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <div class="logo">Animal Monitoring</div>
+            <a href="{{ url_for('logout') }}" class="btn-logout">Logout</a>
+        </header>
+
+        <main class="main-content">
+            <section class="dashboard-cards">
+                <!-- Main Video Section -->
+                <div class="card large-video">
+                    <h2>Live Video Feed</h2>
+                    <div class="video-feed">
+                        <img src="{{ url_for('video_feed') }}" alt="Live Feed" />
+                    </div>
+                    <a href="/download/{{ video_filename }}" class="btn-download">Download Video</a>
+                </div>
+
+                <!-- Heatmap Section -->
+                <div class="card">
+                    <h2>Heatmap</h2>
+                    <div class="heatmap">
+                        <img src="{{ url_for('heatmap') }}" alt="Heatmap" />
+                    </div>
+                </div>
+
+                <!-- Detection Logs Section -->
+                <div class="card">
+                    <h2>Detection Logs</h2>
+                    <div class="logs">
+                        <button onclick="getLogs()">Fetch Logs</button>
+                        <ul id="log-list"></ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        function getLogs() {
+            fetch('/detection_logs')
+                .then(response => response.json())
+                .then(data => {
+                    const logList = document.getElementById('log-list');
+                    logList.innerHTML = '';
+                    data.forEach(log => {
+                        const li = document.createElement('li');
+                        li.textContent = log;
+                        logList.appendChild(li);
+                    });
+                });
+        }
+    </script>
+</body>
+</html>
