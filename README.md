@@ -18,18 +18,18 @@ Certainly! Here's a comprehensive `README.md` for the [IZUMI-Xprime/animalrec](h
 
 ## 🗂️ Repository Structure
 
-`webcam_full.py`: Main script to initiate webcam capture and perform animal detection.
-`telestream3.py`: Handles video streaming functionalities (details to be specified).
-`animal_detections.log`: Log file recording detected animals with relevant details.
-`requirements.txt`: Lists all Python dependencies required to run the project.
-`Procfile.txt`: Configuration file for deployment platforms like Heroku.
-`README.md`: Project documentation (you're reading it!).
+* `webcam_full.py`: Main script to initiate webcam capture and perform animal detection.
+* `telestream3.py`: Handles video streaming functionalities (details to be specified).
+* `animal_detections.log`: Log file recording detected animals with relevant details.
+* `requirements.txt`: Lists all Python dependencies required to run the project.
+* `Procfile.txt`: Configuration file for deployment platforms like Heroku.
+* `README.md`: Project documentation (you're reading it!).
 
 ---
 
-⚙️ Installation
+## ⚙️ Installation
 
-1. Clone the Repository
+1. **Clone the Repository**
 
    ```bash
    git clone https://github.com/IZUMI-Xprime/animalrec.git
@@ -38,7 +38,7 @@ Certainly! Here's a comprehensive `README.md` for the [IZUMI-Xprime/animalrec](h
 
 
 
-2. Create a Virtual Environment (Optional but Recommended)
+2. **Create a Virtual Environment (Optional but Recommended)**
 
    ```bash
    python -m venv venv
@@ -47,7 +47,7 @@ Certainly! Here's a comprehensive `README.md` for the [IZUMI-Xprime/animalrec](h
 
 
 
-3. Install Dependencies
+3. **Install Dependencies**
 
    ```bash
    pip install -r requirements.txt
@@ -57,7 +57,7 @@ Certainly! Here's a comprehensive `README.md` for the [IZUMI-Xprime/animalrec](h
 
 ---
 
-🚀 Usage
+## 🚀 Usage
 
 1. **Run the Application**
 
@@ -69,15 +69,15 @@ Certainly! Here's a comprehensive `README.md` for the [IZUMI-Xprime/animalrec](h
 
 This command will activate your webcam and start the animal detection process.
 
-2. View Logs
+2. **View Logs**
 
    Detected animals and their details are logged in the `animal_detections.log` file.
 
 ---
 
-🧠 How It Works
+## 🧠 How It Works
 
-1. Initialization**: The script initializes the webcam and loads a pre-trained object detection model.
+1. **Initialization**: The script initializes the webcam and loads a pre-trained object detection model.
 2. **Frame Capture**: Continuously captures frames from the webcam.
 3. **Preprocessing**: Each frame is preprocessed to match the model's input requirements.
 4. **Detection**: The model processes the frame and identifies animals, outputting bounding boxes and confidence scores.
