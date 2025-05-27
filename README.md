@@ -1,4 +1,3 @@
-Certainly! Here's a comprehensive `README.md` for the [IZUMI-Xprime/animalrec](https://github.com/IZUMI-Xprime/animalrec) project, structured to provide clarity on its purpose, setup, and usage.
 
 ---
 
