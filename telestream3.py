@@ -19,21 +19,20 @@ app = Flask(__name__)
 app.secret_key = os.getenv("SECRET_KEY", "your_secret_key")  # Secure secret key
 
 # Load YOLO model
-model = YOLO(r'C:\Users\darni\Downloads\yolo11s_segment.pt')
+model = YOLO(yolo11s.pt)
 
 # User credentials
 USER_CREDENTIALS = {"admin": "password123"}
 
 # Email and Telegram settings
-EMAIL_SENDER = os.getenv("EMAIL_SENDER", "22dm11@psgpolytech.ac.in")
-EMAIL_RECEIVER = os.getenv("EMAIL_RECEIVER", "darnishcnpm@gmail.com")
-EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD", "kxml fjog ipep nays")  # Gmail App Password
-TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN", "8165959940:AAFF4ZkA6gL5Hm0JCGaNY2sPfheMoIeocP8")
-TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "1028492554")
+EMAIL_SENDER = os.getenv("EMAIL_SENDER", "#enter email")
+EMAIL_RECEIVER = os.getenv("EMAIL_RECEIVER", "#enter mail")
+EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD", "app pass")  # Gmail App Password
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN", "token")
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "chat id")
 
 # ESP32 stream URL
-esp32_stream_url = "http://192.168.0.106:81/stream" # Replace with your ESP32 stream URL
-#esp32_stream_url = cv2.VideoCapture(0) 
+esp32_stream_url = "ESP32 Stream url" # Replace with your ESP32 stream URL
 
 cap = None
 video_writer = None
