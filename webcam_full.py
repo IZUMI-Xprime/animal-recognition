@@ -28,13 +28,13 @@ model = YOLO(r'C:\Users\darni\Downloads\yolo11s_segment.pt')
 USER_CREDENTIALS = {"admin": "password123"}
 
 # Email and Telegram settings
-EMAIL_SENDER = os.getenv("EMAIL_SENDER", "22dm11@psgpolytech.ac.in")
-EMAIL_RECEIVER = os.getenv("EMAIL_RECEIVER", "darnishcnpm@gmail.com")
-EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD", "kxml fjog ipep nays")  # Gmail App Password
-TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN", "8165959940:AAFF4ZkA6gL5Hm0JCGaNY2sPfheMoIeocP8")
-TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "1028492554")
+EMAIL_SENDER = os.getenv("EMAIL_SENDER", "#enter email")
+EMAIL_RECEIVER = os.getenv("EMAIL_RECEIVER", "#enter mail")
+EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD", "app pass")  # Gmail App Password
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN", "token")
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "chat id")
 
-# ESP32 stream URL
+# WEBCAM
 esp32_stream_url = cv2.VideoCapture(0)
 
 cap = None
